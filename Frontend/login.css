@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');   
+    body{
+        width : 100%;
+        height : 100vh;
+        margin: 0;
+        padding: 0;
+        background : linear-gradient(
+            to bottom,
+            rgb(70, 54, 31) 0%,
+            rgba(12, 18, 32, 0.95) 50%
+        );
+        background-size: cover;
+        display : flex;
+        flex-direction: row;
+        overflow: hidden;
+    }
+    .left-image{
+        width : 44%;
+        height : 100vh;
+        left : 0;
+        top : 0;
+        border-radius: 20px;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        z-index: 1;
+        pointer-events: none;
+        overflow: hidden;
+        flex-shrink: 0;
+    }
+    #back-img{
+        position: absolute;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        left : 0;
+        top : 0;
+        opacity: 35%;
+        z-index: -1;
+        border-radius: 20px;
+        display: block;
+    }
+    #back-arrow{
+        position: absolute;
+        top: 30px;
+        left: 20px;
+        margin-left : 0px;
+        width: 71px;
+        height: 49px;
+        z-index: 1;
+        pointer-events: auto;
+    }
+    .main{
+        position: relative;
+        z-index: 2;
+        width : 45%;
+        height : auto;
+        margin : 30px;
+        margin-left : 90px;
+        border-radius : 20px;
+        border : 1px solid rgba(255,255,255,0.5);
+        padding : 40px;
+        overflow: hidden;
+        background: rgba(255, 255, 255, 0.08);
+        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        opacity: 80%;
+    }
+    .main h2{
+        font-family: 'Inria Serif', serif;
+        font-size: 60px;
+        font-weight: 400;
+        line-height: 70px;
+        letter-spacing: 0em;
+        color: white;
+        text-align: center;
+        margin : 0px;
+        margin-top : 20px;
+    }
+    .form{
+        margin : 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+    .feild{
+        display: flex;
+        flex-direction: column;
+        padding : 0px;
+        margin: 0px;
+    }
+    .feild input{
+        width : 300px;
+        height : 40px;
+        border-radius : 10px;
+        border : 1px solid rgba(255,255,255,0.5);
+        padding : 10px;
+        font-family: 'Inria Serif', serif;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0em;
+        color: white;
+        text-align: left;
+        margin : 0px;
+        background-color: transparent;
+    }
+    .feild input:focus{
+        outline: none;
+    }
+    .feild input:invalid:not(:focus):not(:placeholder-shown) {
+        border-color: #ff4444;
+    }
+    .error-message {
+        color: #ff4444;
+        font-size: 12px;
+        margin-top: 4px;
+        display: none;
+    }
+    .feild input:valid:not(:focus):not(:placeholder-shown) {
+        border-color: #44ff44;
+    }
+    .submit{
+        border-radius : 60px;
+        padding : 10px;
+        width : 40%;
+        height : 50px;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0em;
+        color: white;
+        text-align: center;
+        margin : 0px;
+        background : linear-gradient(to bottom,rgba(197, 163, 51, 0.8) 0%,rgba(185, 146, 30, 0.8) 100%);
+        border : 1px solid rgba(255,255,255,0.5);
+        box-shadow : 0 0 4px 5px rgba(115, 113, 113,0.25);
+        cursor: pointer;
+    }
+    .submit:hover{
+        background : linear-gradient(to bottom,rgba(197, 163, 51, 1) 0%,rgba(185, 146, 30, 1) 100%);
+        transition : 0.45s;
+        box-shadow : 0 0 4px 5px rgba(115, 113, 113,0.5);
+    }
+    .line{
+        border : none;
+        width : 30%;
+        height : 2px;
+        background-color: rgba(255, 255, 255, 0.5);
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+    .google-register{
+        display: flex;
+        flex-direction: row;
+        margin : 0px;
+        padding : 0px;
+        align-items: center;
+        justify-content: center;
+    }
+    .or{
+        font-family: 'Inria Serif', serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 5px;
+        letter-spacing: 0em;
+        color: white;
+        text-align: center;
+        margin : 0px;
+        margin-top : 0px;
+        padding : 0px;
+    }
+    .google-button{
+        display: flex;
+        flex-direction: row;
+        margin : 30px;
+        padding : 0px;
+        align-items: center;
+        justify-content: center;
+    }
+    .google-button img:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+        transition: 0.25s;
+    }
+    .google-button img:active{
+        cursor: pointer;
+        transform: scale(0.9);
+        transition: 0.25s;
+    }

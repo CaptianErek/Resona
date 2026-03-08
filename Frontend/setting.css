@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Average+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+    body{
+        margin : 0px;
+        padding : 0px;
+        width : 100%;
+        height : 100vh;
+        background : 
+        linear-gradient(
+            to bottom right,
+            rgba(0,0,0,0.7),
+            rgba(0,0,0,0.7)
+        ),
+        linear-gradient(
+            to bottom,
+            rgba(255, 255, 255, 0.3),
+            rgba(255, 255, 255, 0.3)),
+        url(Images/Studio\ Background.png);
+        background-size: cover;
+        background-position: center;
+        display : flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .main{
+        background-color: #2A2A2A;
+        width : 80%;
+        height : 80vh;
+        border-radius: 20px;
+        opacity : 80%;
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+        background: linear-gradient(
+            135deg,
+            rgba(47, 47, 47, 0.35) 0%,
+            rgba(67, 67, 67, 0.15) 40%,
+            rgba(7, 7, 7, 0.05) 100%
+            );
+        border: 1px solid rgba(255,255,255,0.3);
+        box-shadow:
+            0 20px 40px rgba(0,0,0,0.25),
+            inset 0 0 40px rgba(255,255,255,0.2);
+        overflow: hidden;
+        display : flex;
+        flex-direction : column;
+    }
+    .main::before,
+    .main::after{
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        pointer-events: none;
+        mix-blend-mode: screen;
+    }
+    .main::before{
+        background: inherit;
+        filter: hue-rotate(20deg) saturate(120%);
+        transform: translateX(-2px);
+        opacity: 0.6;
+    }
+    .main:after{
+        background: inherit;
+        filter: hue-rotate(-20deg) saturate(120%);
+        transform: translateX(2px);
+        opacity: 0.6;
+    }
+    .header{
+        width : 100%;
+        height : 10vh;
+        display : flex;
+        justify-content : space-between;
+        align-items : center;
+        top : 10px;
+        left : 10px;
+        flex-shrink: 0;
+    }
+    .logo{
+        width : 200px;
+        height : 100%;
+        background : url("Images/studio logo.svg");
+        background-size : contain;
+        background-repeat: no-repeat;
+        background-position : center;
+        margin-left: 20px;
+    }
+    .logo:hover{
+        cursor : pointer;
+    }
+    .exit{
+        width : 10%;
+        height : 60%;
+        margin-right: 40px;
+        border-radius: 40px;
+        border : 1px solid #8E8E8E;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor : pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+    }
+    .exit:hover{
+        background-color: #424242;
+        border : 1px solid #424242;
+        color : black;
+    }
+    .exit:active{
+        background-color: #8E8E8E;
+        border : 1px solid #8E8E8E;
+        color : black;
+    }
+    
+    .setting-part {
+        width: 100%;
+        flex: 1;
+        background: transparent;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .setting-part.upper {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .setting-part.lower {
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .white-box {
+        background-color: #474747;
+        width: 20%;
+        height: 70%;
+        border-radius: 10px;
+        display : flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items : center;
+        font-family : "Playfair Display";
+        color : white;
+        transition: all 0.3s ease;
+    }
+
+    .white-box:hover {
+        background-color: #555555;
+        transform : scale(1.05);
+        cursor: pointer;
+    }
+
+    .back-btn{
+        width : 10%;
+        height : 60%;
+        margin-left: 20px;
+        border-radius: 40px;
+        border : 1px solid #8E8E8E;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor : pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+    }
+    .back-btn:hover{
+        background-color: #424242;
+        border : 1px solid #424242;
+        color : black;
+    }
+    .back-btn:active{
+        background-color: #8E8E8E;
+        border : 1px solid #8E8E8E;
+        color : black;
+    }
+
+    #groq-api form, #openrouter-api form{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    #profile p{
+        font-size : clamp(14px,4vh,20px);
+        margin : 0px;
+    }
+
+    #profile img{
+        margin : 0px;
+    }
+
+    /* ── Avatar upload ───────────────────────────────────────── */
+    .avatar-wrapper {
+        position: relative;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        cursor: pointer;
+        flex-shrink: 0;
+    }
+
+    .avatar-wrapper #profile-img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid rgba(255,255,255,0.25);
+        transition: filter 0.25s;
+    }
+
+    .avatar-overlay {
+        position: absolute;
+        inset: 0;
+        border-radius: 50%;
+        background: rgba(0,0,0,0.55);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 0.25s;
+        font-size: 22px;
+    }
+
+    .avatar-wrapper:hover .avatar-overlay {
+        opacity: 1;
+    }
+
+    .avatar-wrapper:hover #profile-img {
+        filter: brightness(0.6);
+    }
+
+    /* ── Key save status ─────────────────────────────────────── */
+    .key-status {
+        font-size: clamp(10px, 1.4vh, 13px);
+        font-family: "Playfair Display";
+        margin: 0;
+        min-height: 16px;
+        transition: color 0.3s;
+    }
+
+    #groq-api input{
+        height : 30%;
+        background : none;
+        border : 0.5px solid white;
+        border-radius: 60px;
+        font-size: clamp(14px,3vh,16px);
+        padding : 10px;
+        color : white;
+        font-family : "PLayfair Display";
+    }
+
+    #groq-api button{
+        width : 40%;
+        height : 10%;
+        border-radius: 60px;
+        border : 1px solid #8E8E8E;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background : linear-gradient(
+            to bottom,
+            rgba(197, 163, 51, 0.6) 0%,
+            rgba(185, 146, 30, 0.6) 100%
+        );
+        cursor : pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        font-size: clamp(10px,3vh,16px);
+        color : white;
+        font-family : "Playfair Display";
+        padding : 20px;
+    }
+
+    #groq-api button:hover{
+        background : linear-gradient(
+            to bottom,
+            rgba(197, 163, 51, 1) 0%,
+            rgba(185, 146, 30, 1) 100%
+        );
+        transform: scale(1.05);
+        border: 1px solid white;
+    }
+
+    #groq-api button:active{
+        transform: scale(0.95);
+    }
+
+    #openrouter-api input{
+        height : 30%;
+        background : none;
+        border : 0.5px solid white;
+        border-radius: 60px;
+        font-size: clamp(10px,2vh,14px);
+        padding : 10px;
+        color : white;
+        font-family : "PLayfair Display";
+    }
+
+    #openrouter-api button{
+        width : 40%;
+        height : 10%;
+        border-radius: 60px;
+        border : 1px solid #8E8E8E;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background : linear-gradient(
+            to bottom,
+            rgba(197, 163, 51, 0.6) 0%,
+            rgba(185, 146, 30, 0.6) 100%
+        );
+        cursor : pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        font-size: clamp(14px,3vh,16px);
+        color : white;
+        font-family : "Playfair Display";
+        padding : 20px;
+    }
+
+    #openrouter-api button:hover{
+        background : linear-gradient(
+            to bottom,
+            rgba(197, 163, 51, 1) 0%,
+            rgba(185, 146, 30, 1) 100%
+        );
+        transform: scale(1.05);
+        border: 1px solid white;
+    }
+
+    #openrouter-api button:active{
+        transform: scale(0.95);
+    }

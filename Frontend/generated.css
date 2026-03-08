@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Average+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    background:
+        linear-gradient(to bottom right, rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+        linear-gradient(to bottom, rgba(255,255,255,0.3), rgba(255,255,255,0.3)),
+        url(Images/Studio\ Background.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    width: min(1200px, 90vw);
+    min-height: 86vh;
+    border-radius: 20px;
+    background: linear-gradient(135deg, rgba(47,47,47,0.35) 0%, rgba(67,67,67,0.15) 40%, rgba(7,7,7,0.08) 100%);
+    border: 1px solid rgba(255,255,255,0.3);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25), inset 0 0 40px rgba(255,255,255,0.2);
+    overflow: hidden;
+    display: flex;
+}
+
+.left-container {
+    width: 90px;
+    background-color: rgba(217,217,217,0.25);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.left-container img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.right-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    width: 100%;
+    height: 74px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 220px;
+    height: 100%;
+    background: url("Images/studio logo.svg") center/cover no-repeat;
+}
+
+.exit {
+    width: 140px;
+    height: 45px;
+    margin-right: 30px;
+    border-radius: 40px;
+    border: 1px solid #8E8E8E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.main-content {
+    padding: 16px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.main-content h2 {
+    margin: 0;
+    color: white;
+    font-family: "Playfair Display", serif;
+    font-size: 34px;
+}
+
+.status-line {
+    margin: 0;
+    font-family: "Average Sans", sans-serif;
+    color: #f2f2f2;
+    font-size: 18px;
+}
+
+#jobStatus {
+    color: #f6db92;
+}
+
+.inputs {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 20px;
+}
+
+.blog-url,
+.conversation-style {
+    border-radius: 16px;
+    background: rgba(71,71,71,0.9);
+    padding: 16px;
+    min-height: 340px;
+}
+
+.section-title {
+    margin: 0 0 12px;
+    font-size: 24px;
+    font-family: "Playfair Display", serif;
+    color: white;
+}
+
+.transcript {
+    max-height: 310px;
+    overflow: auto;
+    padding-right: 10px;
+    font-family: "Average Sans", sans-serif;
+    color: #ececec;
+    line-height: 1.5;
+}
+
+.transcript-line {
+    margin-bottom: 10px;
+}
+
+.transcript-speaker {
+    color: #f6db92;
+    font-weight: 700;
+}
+
+.transcript-line.active-turn {
+    background: rgba(246, 219, 146, 0.08);
+    border-left: 3px solid #f6db92;
+    padding-left: 10px;
+    border-radius: 4px;
+    animation: speakPulse 1.4s ease-in-out infinite;
+}
+
+@keyframes speakPulse {
+    0%, 100% { background: rgba(246, 219, 146, 0.06); }
+    50%       { background: rgba(246, 219, 146, 0.15); }
+}
+
+#liveAudio {
+    width: 100%;
+    margin-top: 6px;
+}
+
+.instruction-text {
+    margin-top: 12px;
+    color: rgba(255,255,255,0.8);
+    font-family: "Average Sans", sans-serif;
+}
+
+.downloads {
+    display: flex;
+    gap: 16px;
+}
+
+.download-container {
+    border-radius: 999px;
+    padding: 12px 18px;
+    border: 1px solid rgba(246,219,146,0.7);
+    color: #f6db92;
+    text-decoration: none;
+    font-family: "Average Sans", sans-serif;
+    transition: 0.2s ease;
+}
+
+.download-container:hover {
+    background: rgba(246,219,146,0.1);
+}
+
+.download-container.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.error-msg {
+    margin: 0;
+    color: #ff8888;
+    font-family: "Average Sans", sans-serif;
+}
+
+@media (max-width: 900px) {
+    .main {
+        width: 95vw;
+        min-height: 94vh;
+    }
+
+    .left-container {
+        display: none;
+    }
+
+    .inputs {
+        grid-template-columns: 1fr;
+    }
+}

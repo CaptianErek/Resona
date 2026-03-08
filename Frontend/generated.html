@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generated Podcast</title>
+    <link rel="stylesheet" href="generated.css">
+</head>
+<body>
+    <div class="main">
+        <div class="left-container">
+            <a href="previous.html"><img src="Images/library.svg" alt="Library"></a>
+            <img src="Images/analytics.svg" alt="Analytics">
+            <a href="setting.html"><img src="Images/Settings.svg" alt="Settings"></a>
+        </div>
+        <div class="right-container">
+            <div class="header">
+                <a href="studio.html" class="logo"></a>
+                <a href="hero.html" class="exit"><div>
+                    <p style="display:inline-block;color:rgb(155,155,155);font-size:16px;font-weight:500;font-family:Average Sans;text-decoration:none;">Exit Studio</p>
+                </div></a>
+            </div>
+            <div class="main-content">
+                <h2>Podcast Generation</h2>
+                <p class="status-line">Status: <span id="jobStatus">Waiting</span></p>
+                <div class="inputs">
+                    <div class="blog-url">
+                        <p class="section-title">Live Transcript</p>
+                        <div id="transcript" class="transcript"></div>
+                    </div>
+                    <div class="conversation-style">
+                        <p class="section-title">Audio</p>
+                        <audio id="liveAudio" controls preload="metadata"></audio>
+                        <p id="audioInfo" class="instruction-text">Audio chunks will play in order as they are generated.</p>
+                    </div>
+                </div>
+                <div class="downloads">
+                    <a id="scriptDownload" class="download-container disabled" href="#" download>Download Script</a>
+                    <a id="audioDownload" class="download-container disabled" href="#" download>Download Audio</a>
+                </div>
+                <p id="errorMessage" class="error-msg"></p>
+            </div>
+        </div>
+    </div>
+    <script src="generated.js"></script>
+</body>
+</html>

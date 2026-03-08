@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Account</title>
+    <link rel = "stylesheet" href = "login.css">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<style>
+</style>
+<body data-auth-mode="login">
+    <div class="left-image">
+        <img src = "Images/left-image.svg" id = "back-img">
+        <a href="hero.html"><img src = "Images/back-arrow.svg" id = "back-arrow"></a>
+    </div>
+    <div class="main">
+        <h2>Welcome Back</h2>
+        <form class = "form">
+            <div class="feild">
+                <input type = "text" placeholder = "Enter your full name" id = "name" required>
+            </div>
+            <div class="feild">
+                <input type = "email" placeholder = "Enter your email address" id = "email" required>
+            </div>
+            <div class="feild">
+                <input type = "password" placeholder = "Enter your password" id = "password" name = "password" minlength="8" title = "Must contain at least 8 characters, including uppercase, lowercase, number and special character" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$">
+                <span class="error-message" id="password-error"></span>
+            </div>
+            <button type = "submit" class = "submit">Sign In</button>
+        </form>
+        <div class="google-register">
+            <div class="line"></div>
+            <p class = "or">Or countinue with</p>
+            <div class="line"></div>
+        </div>
+        <div class="google-button">
+            <img src = "Images/google logo.svg" id = "google-logo">
+        </div>
+    </div>
+    <script src="login.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>

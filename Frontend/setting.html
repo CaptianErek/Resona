@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings – Resona</title>
+    <link rel="stylesheet" href="setting.css">
+</head>
+<body>
+    <div class="main">
+        <div class="header">
+            <a href="studio.html" class="back-btn"><div>
+                <p style="display:inline-block;color:rgb(155,155,155);font-size:clamp(4px,1.8vh,20px);font-weight:500;font-family:Average Sans;text-decoration:None;">Back</p>
+            </div></a>
+            <a href="studio.html" class="logo"></a>
+            <a href="hero.html" class="exit"><div>
+                <p style="display:inline-block;color:rgb(155,155,155);font-size:clamp(4px,1.8vh,20px);font-weight:500;font-family:Average Sans;text-decoration:None;">Exit Studio</p>
+            </div></a>
+        </div>
+
+        <!-- Profile Section -->
+        <div class="setting-part upper">
+            <div class="white-box" id="profile">
+                <p>Profile</p>
+
+                <!-- Avatar with upload overlay -->
+                <div class="avatar-wrapper" id="avatar-wrapper" title="Click to change photo">
+                    <img src="Images/profile.svg" alt="Profile photo" id="profile-img">
+                    <div class="avatar-overlay">
+                        <span>&#128247;</span>
+                    </div>
+                    <input type="file" id="avatar-file-input" accept="image/*" style="display:none;">
+                </div>
+
+                <p id="user-name" style="font-size:clamp(14px,4vh,26px);">Loading…</p>
+                <p id="user-email" style="font-size:clamp(10px,1.6vh,14px);color:rgba(255,255,255,0.5);margin:0;"></p>
+            </div>
+        </div>
+
+        <!-- API Keys Section -->
+        <div class="setting-part lower">
+            <div class="white-box" id="groq-api">
+                <p>Grok API</p>
+                <form id="groq-form">
+                    <input type="text" id="groq-input" placeholder="Enter your Grok API key" style="width:80%;height:10%;" required>
+                    <p class="key-status" id="groq-status"></p>
+                    <button type="submit">Save</button>
+                </form>
+            </div>
+            <div class="white-box" id="openrouter-api">
+                <p>OpenRouter API</p>
+                <form id="openrouter-form">
+                    <input type="text" id="openrouter-input" placeholder="Enter your OpenRouter API key" style="width:80%;height:10%;" required>
+                    <p class="key-status" id="openrouter-status"></p>
+                    <button type="submit">Save</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="setting.js"></script>
+</body>
+</html>

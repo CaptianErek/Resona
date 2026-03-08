@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resona Studio</title>
+    <link rel="stylesheet" href="studio.css">
+</head>
+<body>
+    <div class="main">
+        <div class="left-container">
+            <a href="previous.html"><img src="Images/library.svg" alt="Library"></a>
+            <a href="setting.html"><img src="Images/Settings.svg" alt="Settings"></a>
+        </div>
+        <div class="right-container">
+            <div class="header">
+                <a href="studio.html" class="logo"></a>
+                <a href="hero.html" class="exit"><div>
+                    <p style="display:inline-block;color:rgb(155,155,155);font-size:16px;font-weight:500;font-family:Average Sans;text-decoration:none;">Exit Studio</p>
+                </div></a>
+            </div>
+            <div class="main-content">
+                <h2>Dual AI Conversation Studio</h2>
+                <div class="inputs">
+                    <div class="blog-url">
+                        <p class="section-title">Blog URL</p>
+                        <form class="blog-form" id="blogForm">
+                            <input type="url" id="blogUrlInput" placeholder="Enter blog URL" required>
+                            <button type="submit" id="urlSubmitBtn">Submit</button>
+                        </form>
+                        <p class="error-msg" id="urlError">Enter a valid URL</p>
+
+                        <p class="section-title section-title-small">Exchanges</p>
+                        <input type="number" id="exchangesInput" min="2" max="40" step="1" value="8" required>
+                        <p class="error-msg" id="exchangesError">Exchanges must be between 2 and 40</p>
+                    </div>
+                    <div class="conversation-style">
+                        <p class="section-title">Conversation Style</p>
+                        <p class="instruction-text">(Select only one)</p>
+                        <form class="conversation-options" id="styleOptions">
+                            <div class="options">
+                                <button type="button" class="option" data-style="Interview">Interview</button>
+                                <button type="button" class="option" data-style="Debate">Debate</button>
+                            </div>
+                            <div class="options">
+                                <button type="button" class="option" data-style="Casual Chat">Casual Chat</button>
+                                <button type="button" class="option" data-style="Storytelling">Storytelling</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="submit-section">
+                <button type="button" id="generateButton" disabled>Generate Podcast</button>
+            </div>
+            <p class="error-msg submit-error" id="submitError"></p>
+        </div>
+    </div>
+    <script src="studio.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Account</title>
+    <link rel = "stylesheet" href = "new.css">
+    <meta name="google-client-id" content="">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<style>
+    .password-formatter{
+        color : rgba(225,225,225,0.5);
+        font-size : 15px;
+        margin-bottom: 5px;
+    }
+</style>
+<body data-auth-mode="register">
+    <div class="left-image">
+        <img src = "Images/left-image.svg" id = "back-img" loading="lazy" decoding="async">
+        <a href="hero.html"><img src = "Images/back-arrow.svg" id = "back-arrow"></a>
+    </div>
+    <div class="main">
+        <h2>Start the Dialogue</h2>
+        <form class = "form">
+            <div class="feild">
+                <input type = "text" placeholder = "Enter your full name" id = "name" required>
+            </div>
+            <div class="feild">
+                <input type = "email" placeholder = "Enter your email address" id = "email" required>
+            </div>
+            <div class="feild">
+                <span class = "password-formatter">Password</span>
+                <input type = "password" placeholder = "Must contain at least 8 characters, including uppercase, lowercase, number and special character" id = "password" name = "password" minlength="8" title = "Must contain at least 8 characters, including uppercase, lowercase, number and special character" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$" oninput="checkPassword()" style="font-size: 13px;">
+                <span class="error-message" id="password-error"></span>
+            </div>
+            <div class="feild">
+                <span class = "password-formatter">Confirm password</span>
+                <input type = "password" placeholder = "Must contain at least 8 characters, including uppercase, lowercase, number and special character" id = "confirm-password" name = "confirm-password" minlength="8" title = "Must contain at least 8 characters, including uppercase, lowercase, number and special character" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$" oninput="checkPasswordMatch()" style="font-size: 13px;">
+                <span class="error-message" id="confirm-password-error"></span>
+            </div>
+            <button type = "submit" class = "submit" id = "submit-btn">Create your voice</button>
+        </form>
+        <div class="google-register">
+            <div class="line"></div>
+            <p class = "or">Or countinue with</p>
+            <div class="line"></div>
+        </div>
+        <div class="google-button">
+            <img src="Images/google logo.svg" id="google-logo" title="Sign in with Google" alt="Sign in with Google">
+        </div>
+    </div>
+    <script src="new.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>

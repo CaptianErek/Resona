@@ -1,0 +1,71 @@
+# ── Database ──────────────────────────────────
+*.db
+*.sqlite
+*.sqlite3
+
+# ── Environment / Secrets ─────────────────────
+.env
+.env.*
+!.env.example
+
+# ── Generated Storage ─────────────────────────
+storage/
+
+# ── Logs ──────────────────────────────────────
+logs/
+*.log
+
+# ── Python ────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+*.so
+.venv/
+venv/
+env/
+ENV/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+htmlcov/
+.coverage
+coverage.xml
+
+# ── Node / JavaScript ─────────────────────────
+node_modules/
+package-lock.json
+yarn.lock
+.npm/
+.pnp/
+.pnp.js
+.yarn/
+
+# ── VS Code ───────────────────────────────────
+.vscode/
+
+# ── macOS ─────────────────────────────────────
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# ── Linux ─────────────────────────────────────
+*~
+.nfs*
+
+# ── Windows ───────────────────────────────────
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ── Temporary / Editor files ──────────────────
+*.swp
+*.swo
+*.bak
+*.tmp
+*.orig
