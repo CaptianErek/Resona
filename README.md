@@ -181,15 +181,6 @@ SQLite database (`resona.db`) managed by SQLAlchemy.
 | Frontend | Vanilla HTML · CSS · JavaScript |
 | Auth | Email/password · Google OAuth 2.0 |
 
----
-
-## 📄 Planning Documents
-
-- [Resona Plan.md](./Resona%20Plan.md) — high-level architecture and feature design
-- [Resona SBS Plan.md](./Resona%20SBS%20Plan.md) — step-by-step implementation plan
-
----
-
 ## ⚠️ Important Notes
 
 - `resona.db`, `storage/`, `Backend/.env`, and `logs/` are excluded from version control — see `.gitignore`
