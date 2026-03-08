@@ -51,6 +51,7 @@ Blog to Podcast/
 │
 ├── logs/                     # Backend log files (auto-created)
 ├── resona.db                 # SQLite database (⚠️ never commit)
+├── requirements.txt          # Python dependencies (pip freeze)
 ├── package.json              # Node.js dependencies (dotenv)
 └── README.md                 # You are here
 ```
@@ -65,6 +66,7 @@ Blog to Podcast/
 |------|---------|
 | Python | 3.11+ |
 | pip | latest |
+| conda | optional (recommended) |
 | Node.js | 18+ (for `dotenv`) |
 
 ### 1. Clone the repo
@@ -76,11 +78,18 @@ cd "Blog to Podcast"
 
 ### 2. Set up the Python environment
 
+**Option A — conda (recommended):**
 ```bash
-cd Backend
+conda create -n resona python=3.11 -y
+conda activate resona
+pip install -r requirements.txt
+```
+
+**Option B — venv:**
+```bash
 python -m venv .venv
 source .venv/bin/activate        # Windows: .venv\Scripts\activate
-pip install fastapi uvicorn sqlalchemy pydantic openai requests beautifulsoup4 pydub httpx
+pip install -r requirements.txt
 ```
 
 ### 3. Configure environment variables
